@@ -74,12 +74,14 @@
   }
 }
 .main-header__menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   position: absolute;
-  top: 73px;
+  opacity: 0;
+  top: -390px;
   background-color: #333333;
+  transition: 0.2s ease-in-out;
   @media (min-width: $break-point-1) {
     background-color: transparent;
     position: static;
@@ -97,7 +99,8 @@
   }
 }
 .main-header__menu--open {
-  display: flex;
+  opacity: 1;
+  top: 73px;
 }
 .main-header__menu-link {
   display: flex;
@@ -177,11 +180,6 @@
   }
 }
 
-
-
-
-
-
 .main-header__menu-button {
   cursor: pointer;
   background: none;
@@ -231,13 +229,6 @@
   transition: 0.2;
   transform: translate(0px, -9px) rotate(-45deg);
 }
-
-
-
-
-
-
-
 
 .intro__text-container {
   @include flex-center;
