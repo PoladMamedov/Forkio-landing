@@ -85,6 +85,7 @@
   @media (min-width: $break-point-1) {
     background-color: transparent;
     position: static;
+    opacity: 1;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -179,7 +180,6 @@
     grid-column: 4 / 5;
   }
 }
-
 .main-header__menu-button {
   cursor: pointer;
   background: none;
@@ -229,7 +229,6 @@
   transition: 0.2;
   transform: translate(0px, -9px) rotate(-45deg);
 }
-
 .intro__text-container {
   @include flex-center;
   flex-direction: column;
