@@ -1,0 +1,66 @@
+.rev-editor {
+  padding-top: 130px;
+  padding-bottom: 80px;
+  @media (min-width: $break-point-1) {
+    padding-top: 160px;
+    padding-bottom: 70px;
+  }
+}
+.rev-editor__title {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 28px;
+  color: $rev-editor-title-color;
+  @media (min-width: $break-point-1) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  @media (min-width: $break-point-2) {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+.rev-editor__text {
+  margin-top: 25px;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $rev-editor-text-color;
+  @media (min-width: $break-point-1) {
+    font-size: 21px;
+    line-height: 32px;
+  }
+  @media (min-width: $break-point-2) {
+    margin-top: 35px;
+  }
+}
+.rev-editor__buttons-container {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 35px;
+}
+.rev-editor__button {
+  @include flex-center;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 14px;
+  overflow: hidden;
+}
+.rev-editor__github-btn {
+  cursor: pointer;
+  @include flex-center;
+  gap: 5px;
+  padding: 5px 8px;
+  background: linear-gradient(#fcfcfc, #eeeeef);
+  &:active {
+    background: linear-gradient(darken(#fcfcfc, 10%), darken(#eeeeef, 10%));
+  }
+}
+.rev-editor__btn-counter {
+  padding: 5px 8px;
+}

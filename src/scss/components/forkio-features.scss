@@ -1,0 +1,108 @@
+.forkio-features {
+  padding-top: 30px;
+  @media (min-width: $break-point-1) {
+    padding-top: 60px;
+  }
+  @media (min-width: $break-point-2) {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background: #f4f4f4;
+  }
+}
+.forkio-features__container {
+  @media (min-width: $break-point-2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+.forkio-features__title {
+  text-align: center;
+  font-size: 32px;
+  line-height: 38px;
+  color: #8d81ac;
+  margin: 0;
+  &::before {
+    content: "<";
+    color: #8d81ac;
+  }
+  &::after {
+    content: ">";
+    color: #8d81ac;
+  }
+  @media (min-width: $break-point-1) {
+    font-size: 42px;
+    line-height: 44px;
+  }
+  @media (min-width: $break-point-2) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+.forkio-features__list {
+  @include flex-center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 36px;
+  @media (min-width: $break-point-1) {
+    margin-top: 50px;
+    gap: 60px;
+  }
+  @media (min-width: $break-point-2) {
+    margin-top: 0;
+    grid-row: 1 / 3;
+  }
+}
+.forkio-features__list-item {
+  @include flex-center;
+  flex-direction: column;
+  gap: 15px;
+  @media (min-width: $break-point-1) {
+    display: grid;
+    grid-template-columns: 0.15fr 1fr;
+    place-items: start;
+    column-gap: 25px;
+    row-gap: 0px;
+  }
+}
+.forkio-features__list-item-img {
+  grid-row: 1 / 3;
+}
+.forkio-features__list-item-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $forkio-features__list-item-title;
+  text-align: center;
+  margin: 0;
+  @media (min-width: $break-point-1) {
+    line-height: 21px;
+  }
+}
+.forkio-features__list-item-text {
+  font-size: 14px;
+  line-height: 21px;
+  color: $forkio-features__list-item-text;
+  font-family: $secondary-font;
+  text-align: center;
+  @media (min-width: $break-point-1) {
+    text-align: left;
+  }
+}
+.forkio-features__picture {
+  margin-top: 60px;
+  display: block;
+  margin-left: auto;
+  position: relative;
+  right: -10px;
+  width: 300px;
+  @media (min-width: $break-point-1) {
+    margin-top: 75px;
+    width: fit-content;
+  }
+  @media (min-width: $break-point-2) {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+}
