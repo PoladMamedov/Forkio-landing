@@ -28,30 +28,38 @@
   }
 }
 .fork-pricing__list {
-  @include flex-center;
-  flex-direction: column;
+  display: grid;
+  align-items: center;
+  justify-items: center;
   margin-top: 30px;
-  gap: 20px;
-  @media (min-width: 645px) {
-    display: grid;
-    margin-right: auto;
-    margin-left: auto;
-    place-items: center;
-    width: fit-content;
-    column-gap: 25px;
-    row-gap: 70px;
+  row-gap: 20px;
+  @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 25px;
+    .fork-pricing__list-item1,
+    .fork-pricing__list-item3 {
+      justify-self: end;
+    }
+    .fork-pricing__list-item2,
+    .fork-pricing__list-item4 {
+      justify-self: start;
+    }
   }
-  @media (min-width: 1130px) {
-    @include flex-center;
-    flex-direction: row;
-    gap: 15px;
-    margin-top: 60px;
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    .fork-pricing__list-item1,
+    .fork-pricing__list-item2,
+    .fork-pricing__list-item3,
+    .fork-pricing__list-item4 {
+      justify-self: center;
+    }
   }
 }
 .fork-pricing__list-item {
-  @include flex-center;
-  justify-content: flex-start;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.11);
   min-height: 450px;
@@ -130,20 +138,5 @@
     width: 190px;
     height: 52px;
     margin-top: 80px;
-  }
-}
-.fork-pricing__list-item--place-start {
-  @media (min-width: 645px) and (max-width: 1129px) {
-    place-self: start;
-  }
-}
-.fork-pricing__list-item--place-end {
-  @media (min-width: 645px) and (max-width: 1129px) {
-    place-self: end;
-  }
-}
-.fork-pricing__list-item--place-start-center {
-  @media (min-width: 645px) and (max-width: 1129px) {
-    place-self: center start;
   }
 }
