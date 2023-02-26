@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 718px;
+  min-width: 320px;
   position: relative;
   @media (min-width: $break-point-1) {
     min-height: 800px;
